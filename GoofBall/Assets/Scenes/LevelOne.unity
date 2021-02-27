@@ -733,9 +733,9 @@ MonoBehaviour:
   moveSpeed: 8
   rb: {fileID: 1959835212}
   maxUp: 4.8
-  maxDown: -5
-  maxLeft: 5
-  maxRight: -5
+  maxDown: -4.8
+  maxLeft: -11
+  maxRight: 11
 --- !u!212 &1959835215
 SpriteRenderer:
   m_ObjectHideFlags: 0
