@@ -28,7 +28,18 @@ public class Movebaby : MonoBehaviour
         {
             rb.MovePosition(new Vector2(rb.position.x, maxUp));
         }
-
+        else if (rb.transform.position.y < maxDown)
+        {
+            rb.MovePosition(new Vector2(rb.position.x, maxDown));
+        }
+        else if (rb.transform.position.x > maxRight)
+        {
+            rb.MovePosition(new Vector2(maxRight, rb.position.y));
+        }
+        else if (rb.position.x < maxLeft)
+        {
+            rb.MovePosition(new Vector2(maxLeft, rb.position.y));
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
