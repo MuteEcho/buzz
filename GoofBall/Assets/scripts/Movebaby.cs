@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movebaby : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Movebaby : MonoBehaviour
         }
         else if (rb.transform.position.x > maxRight)
         {
+<<<<<<< HEAD
             rb.MovePosition(new Vector2(maxLeft,rb.position.y));
         }
         else if (rb.transform.position.x < maxLeft)
@@ -41,11 +43,19 @@ public class Movebaby : MonoBehaviour
             rb.MovePosition(new Vector2(maxLeft,rb.position.y));
         }
 
+=======
+            rb.MovePosition(new Vector2(maxRight, rb.position.y));
+        }
+        else if (rb.position.x < maxLeft)
+        {
+            rb.MovePosition(new Vector2(maxLeft, rb.position.y));
+        }
+>>>>>>> main
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("you died");
-        Application.LoadLevel("LevelOne");
+        SceneManager.LoadScene("MainMenu");
     }
 }
