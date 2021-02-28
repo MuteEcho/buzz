@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("LevelOne");
+        PlayerPrefs.SetInt("points", 0);
     }
 
     public void QuitGame()
