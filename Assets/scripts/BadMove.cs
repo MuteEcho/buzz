@@ -12,6 +12,7 @@ public class BadMove : MonoBehaviour
     public float spawnMax = 5f;
     public float spawnMin = -5f;
     public Rigidbody2D rb;
+    public GameObject scoreCounter;
 
     Vector2 movement;
     Vector2 spawn;
@@ -32,6 +33,7 @@ public class BadMove : MonoBehaviour
             spawn.y = Random.Range(spawnMin, spawnMax);
             rb.position = spawn;
             moveSpeed = Random.Range(moveSpeedMin, moveSpeedMax);
+            PlayerPrefs.SetInt("points", PlayerPrefs.GetInt("points", 0) + 1);
 
             float chance = Random.Range(0, 100);
             if (chance > 90)
